@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
     yandex: "your-yandex-verification-code",
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -129,6 +129,37 @@ export default function RootLayout({
                 "Downloadable PDF guides",
               ],
             }),
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Suppress ResizeObserver loop errors
+              window.addEventListener('error', function(e) {
+                if (e.message && (e.message.includes('ResizeObserver') || e.message.includes('resize observer'))) {
+                  e.stopImmediatePropagation();
+                  e.preventDefault();
+                  return false;
+                }
+              });
+              
+              window.addEventListener('unhandledrejection', function(e) {
+                if (e.reason && e.reason.message && (e.reason.message.includes('ResizeObserver') || e.reason.message.includes('resize observer'))) {
+                  e.preventDefault();
+                  return false;
+                }
+              });
+              
+              // Override console.error to suppress ResizeObserver messages
+              const originalConsoleError = console.error;
+              console.error = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('ResizeObserver') || message.includes('resize observer')) {
+                  return;
+                }
+                originalConsoleError.apply(console, args);
+              };
+            `,
           }}
         />
         <style>{`

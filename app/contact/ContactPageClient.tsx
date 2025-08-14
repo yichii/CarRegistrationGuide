@@ -27,7 +27,6 @@ export default function ContactPageClient() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 2000))
 
     setIsSubmitting(false)
@@ -41,16 +40,23 @@ export default function ContactPageClient() {
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
-        <Card className="max-w-md mx-auto text-center">
+        <Card className="max-w-md mx-auto text-center shadow-xl">
           <CardContent className="pt-8">
-            <CheckCircle className="h-16 w-16 text-green-600 mx-auto mb-4" />
+            <div className="relative mb-4">
+              <CheckCircle className="h-16 w-16 text-green-600 mx-auto animate-pulse" />
+              <div className="absolute inset-0 rounded-full bg-green-100 animate-ping opacity-25"></div>
+            </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h2>
             <p className="text-gray-600 mb-6">Thank you for contacting us. We'll get back to you within 24 hours.</p>
             <div className="space-y-3">
-              <Button asChild className="w-full">
+              <Button asChild className="w-full transform hover:scale-105 transition-all duration-200">
                 <Link href="/">Return to Home</Link>
               </Button>
-              <Button variant="outline" asChild className="w-full bg-transparent">
+              <Button
+                variant="outline"
+                asChild
+                className="w-full bg-transparent hover:bg-gray-50 transform hover:scale-105 transition-all duration-200"
+              >
                 <Link href="/faq">Browse FAQ</Link>
               </Button>
             </div>
@@ -179,8 +185,19 @@ export default function ContactPageClient() {
                       />
                     </div>
 
-                    <Button type="submit" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? "Sending..." : "Send Message"}
+                    <Button
+                      type="submit"
+                      className="w-full transform hover:scale-105 transition-all duration-200 disabled:transform-none"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <div className="flex items-center justify-center space-x-2">
+                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                          <span>Sending Message...</span>
+                        </div>
+                      ) : (
+                        "Send Message"
+                      )}
                     </Button>
                   </form>
                 </CardContent>
@@ -215,13 +232,21 @@ export default function ContactPageClient() {
                   <CardContent>
                     <p className="text-gray-600 mb-4">You might find your answer faster in our resources:</p>
                     <div className="space-y-3">
-                      <Button variant="outline" asChild className="w-full justify-start bg-transparent">
+                      <Button
+                        variant="outline"
+                        asChild
+                        className="w-full justify-start bg-transparent hover:bg-gray-50 transform hover:scale-105 transition-all duration-200"
+                      >
                         <Link href="/faq">
                           <MessageSquare className="h-4 w-4 mr-2" />
                           Browse FAQ
                         </Link>
                       </Button>
-                      <Button variant="outline" asChild className="w-full justify-start bg-transparent">
+                      <Button
+                        variant="outline"
+                        asChild
+                        className="w-full justify-start bg-transparent hover:bg-gray-50 transform hover:scale-105 transition-all duration-200"
+                      >
                         <Link href="/help">
                           <Mail className="h-4 w-4 mr-2" />
                           Help Center
