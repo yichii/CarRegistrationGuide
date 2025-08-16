@@ -134,31 +134,63 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Suppress ResizeObserver loop errors
-              window.addEventListener('error', function(e) {
-                if (e.message && (e.message.includes('ResizeObserver') || e.message.includes('resize observer'))) {
-                  e.stopImmediatePropagation();
-                  e.preventDefault();
+              // Enhanced ResizeObserver error suppression
+              (function() {
+                const originalError = window.onerror;
+                const originalUnhandledRejection = window.onunhandledrejection;
+                
+                // Suppress ResizeObserver errors
+                window.onerror = function(message, source, lineno, colno, error) {
+                  if (typeof message === 'string' && message.toLowerCase().includes('resizeobserver')) {
+                    return true; // Prevent default error handling
+                  }
+                  if (originalError) {
+                    return originalError.apply(this, arguments);
+                  }
                   return false;
-                }
-              });
-              
-              window.addEventListener('unhandledrejection', function(e) {
-                if (e.reason && e.reason.message && (e.reason.message.includes('ResizeObserver') || e.reason.message.includes('resize observer'))) {
-                  e.preventDefault();
+                };
+                
+                window.onunhandledrejection = function(event) {
+                  if (event.reason && typeof event.reason.message === 'string' && 
+                      event.reason.message.toLowerCase().includes('resizeobserver')) {
+                    event.preventDefault();
+                    return true;
+                  }
+                  if (originalUnhandledRejection) {
+                    return originalUnhandledRejection.apply(this, arguments);
+                  }
                   return false;
-                }
-              });
-              
-              // Override console.error to suppress ResizeObserver messages
-              const originalConsoleError = console.error;
-              console.error = function(...args) {
-                const message = args.join(' ');
-                if (message.includes('ResizeObserver') || message.includes('resize observer')) {
-                  return;
-                }
-                originalConsoleError.apply(console, args);
-              };
+                };
+                
+                // Override console methods to suppress ResizeObserver messages
+                ['error', 'warn', 'log'].forEach(method => {
+                  const original = console[method];
+                  console[method] = function(...args) {
+                    const message = args.join(' ').toLowerCase();
+                    if (message.includes('resizeobserver') || message.includes('resize observer')) {
+                      return;
+                    }
+                    original.apply(console, args);
+                  };
+                });
+                
+                // Additional error event listener
+                window.addEventListener('error', function(e) {
+                  if (e.message && e.message.toLowerCase().includes('resizeobserver')) {
+                    e.stopImmediatePropagation();
+                    e.preventDefault();
+                    return false;
+                  }
+                }, true);
+                
+                window.addEventListener('unhandledrejection', function(e) {
+                  if (e.reason && e.reason.message && 
+                      e.reason.message.toLowerCase().includes('resizeobserver')) {
+                    e.preventDefault();
+                    return false;
+                  }
+                }, true);
+              })();
             `,
           }}
         />

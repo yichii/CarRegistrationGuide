@@ -25,6 +25,7 @@ import { useSearchParams, useRouter } from "next/navigation"
 import { Suspense } from "react"
 import { ProgressSteps } from "@/components/progress-steps"
 import { US_STATES, VEHICLE_TYPE_LABELS, MOVE_DATE_LABELS, EXIT_STATE_DATA, ENTRY_STATE_DATA } from "@/lib/checklists"
+import { CostCalculator } from "@/components/cost-calculator"
 
 // Map Lucide icon names (strings) to actual components
 const LucideIcons: Record<string, any> = {
@@ -187,16 +188,20 @@ function ChecklistContent() {
                         <p className="text-gray-600">{form.description}</p>
                       </div>
                       {form.url && (
-                        <Button variant="outline" className="ml-4 bg-transparent" asChild>
-                          <a
-                            href={`/api/download-form?url=${encodeURIComponent(form.url)}&fileName=${encodeURIComponent(form.name.replace(/[^a-zA-Z0-9]/g, "_") + ".pdf")}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <ExternalLink className="h-4 w-4 mr-2" />
-                            View Form
-                          </a>
-                        </Button>
+                        <div className="ml-4 flex space-x-2">
+                          <Button variant="outline" className="bg-transparent" asChild>
+                            <a href={form.url} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-4 w-4 mr-2" />
+                              View Form
+                            </a>
+                          </Button>
+                          <Button variant="ghost" size="sm" asChild>
+                            <a href={form.url} download>
+                              <Download className="h-4 w-4 mr-2" />
+                              Download
+                            </a>
+                          </Button>
+                        </div>
                       )}
                     </div>
                   </CardContent>
@@ -310,6 +315,22 @@ function ChecklistContent() {
               </div>
             </section>
           )}
+
+          {/* Cost Calculator Section */}
+          <section className="mb-12">
+            <div className="flex items-center space-x-2 mb-6">
+              <DollarSign className="h-6 w-6 text-green-600" />
+              <h2 className="text-2xl font-bold text-gray-900">Estimated Costs</h2>
+            </div>
+
+            <CostCalculator
+              fromState={fromState}
+              toState={toState}
+              vehicleTypes={vehicles}
+              isStudent={isStudent}
+              isMilitary={isMilitary}
+            />
+          </section>
 
           {/* Download Section */}
           <section id="download" className="mb-12">
