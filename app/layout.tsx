@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
     yandex: "your-yandex-verification-code",
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -129,6 +129,69 @@ export default function RootLayout({
                 "Downloadable PDF guides",
               ],
             }),
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Enhanced ResizeObserver error suppression
+              (function() {
+                const originalError = window.onerror;
+                const originalUnhandledRejection = window.onunhandledrejection;
+                
+                // Suppress ResizeObserver errors
+                window.onerror = function(message, source, lineno, colno, error) {
+                  if (typeof message === 'string' && message.toLowerCase().includes('resizeobserver')) {
+                    return true; // Prevent default error handling
+                  }
+                  if (originalError) {
+                    return originalError.apply(this, arguments);
+                  }
+                  return false;
+                };
+                
+                window.onunhandledrejection = function(event) {
+                  if (event.reason && typeof event.reason.message === 'string' && 
+                      event.reason.message.toLowerCase().includes('resizeobserver')) {
+                    event.preventDefault();
+                    return true;
+                  }
+                  if (originalUnhandledRejection) {
+                    return originalUnhandledRejection.apply(this, arguments);
+                  }
+                  return false;
+                };
+                
+                // Override console methods to suppress ResizeObserver messages
+                ['error', 'warn', 'log'].forEach(method => {
+                  const original = console[method];
+                  console[method] = function(...args) {
+                    const message = args.join(' ').toLowerCase();
+                    if (message.includes('resizeobserver') || message.includes('resize observer')) {
+                      return;
+                    }
+                    original.apply(console, args);
+                  };
+                });
+                
+                // Additional error event listener
+                window.addEventListener('error', function(e) {
+                  if (e.message && e.message.toLowerCase().includes('resizeobserver')) {
+                    e.stopImmediatePropagation();
+                    e.preventDefault();
+                    return false;
+                  }
+                }, true);
+                
+                window.addEventListener('unhandledrejection', function(e) {
+                  if (e.reason && e.reason.message && 
+                      e.reason.message.toLowerCase().includes('resizeobserver')) {
+                    e.preventDefault();
+                    return false;
+                  }
+                }, true);
+              })();
+            `,
           }}
         />
         <style>{`

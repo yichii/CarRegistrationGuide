@@ -279,6 +279,8 @@ export default function StartPageClient() {
     setErrors({})
 
     try {
+      await new Promise((resolve) => setTimeout(resolve, 1500))
+
       const params = new URLSearchParams({
         from: fromState,
         to: toState,
@@ -302,37 +304,37 @@ export default function StartPageClient() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50/30">
       {/* Header */}
       <header className="border-b border-gray-200 bg-white/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 sm:h-20">
-            <Link href="/" className="flex items-center space-x-2">
-              <Car className="h-7 w-7 sm:h-8 sm:w-8 text-blue-600" />
-              <span className="text-lg sm:text-xl font-bold text-gray-900">VehicleReregister</span>
+        <div className="container mx-auto px-6 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20 sm:h-16">
+            <Link href="/" className="flex items-center space-x-3 sm:space-x-2">
+              <Car className="h-8 w-8 sm:h-7 sm:w-7 text-blue-600" />
+              <span className="text-xl sm:text-lg font-bold text-gray-900">VehicleReregister</span>
             </Link>
-            <div className="flex items-center space-x-2 sm:space-x-4">
+            <div className="flex items-center space-x-3 sm:space-x-4">
               <div className="hidden sm:block">
                 <ProgressSteps currentStep={1} totalSteps={2} />
               </div>
-              {saveStatus === "saving" && <span className="text-xs sm:text-sm text-gray-500">Saving...</span>}
+              {saveStatus === "saving" && <span className="text-sm text-gray-500">Saving...</span>}
               {saveStatus === "saved" && (
-                <div className="flex items-center space-x-1 text-xs sm:text-sm text-green-600">
-                  <CheckCircle2 className="h-3 w-3 sm:h-4 sm:w-4" />
+                <div className="flex items-center space-x-1 text-sm text-green-600">
+                  <CheckCircle2 className="h-4 w-4" />
                   <span className="hidden sm:inline">Saved</span>
                 </div>
               )}
-              {saveStatus === "error" && <span className="text-xs sm:text-sm text-red-500">Save failed</span>}
+              {saveStatus === "error" && <span className="text-sm text-red-500">Save failed</span>}
             </div>
           </div>
         </div>
       </header>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+      <div className="container mx-auto px-6 sm:px-6 lg:px-8 py-8 sm:py-6 lg:py-12">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-8 sm:mb-12">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">
+          <div className="text-center mb-10 sm:mb-8">
+            <h1 className="text-3xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-3 leading-tight px-2">
               Let's get your vehicle registered in your new state
             </h1>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
               Answer a few questions and we'll generate a custom checklist for you.
             </p>
           </div>
@@ -345,26 +347,26 @@ export default function StartPageClient() {
           )}
 
           {/* Main Form */}
-          <Card className="shadow-xl border-0 bg-white/80 backdrop-blur-sm mx-4 sm:mx-0">
-            <CardHeader className="pb-6">
-              <CardTitle className="text-xl sm:text-2xl font-semibold text-gray-900">Tell us about your move</CardTitle>
-              <CardDescription className="text-gray-600 text-base">
+          <Card className="shadow-xl border-0 bg-white/80 backdrop-blur-sm mx-2 sm:mx-0">
+            <CardHeader className="pb-6 px-6 sm:px-6">
+              <CardTitle className="text-2xl sm:text-xl font-semibold text-gray-900">Tell us about your move</CardTitle>
+              <CardDescription className="text-gray-600 text-lg sm:text-base">
                 We'll use this information to create your personalized registration checklist
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-8">
+            <CardContent className="space-y-10 sm:space-y-8 px-6 sm:px-6">
               {/* State Selection */}
               <div className="space-y-6">
-                <div className="flex items-center space-x-2 pb-2 border-b border-gray-100">
-                  <MapPin className="h-5 w-5 text-blue-600" />
-                  <h3 className="text-lg font-semibold text-gray-900">
+                <div className="flex items-center space-x-3 sm:space-x-2 pb-3 sm:pb-2 border-b border-gray-100">
+                  <MapPin className="h-6 w-6 sm:h-5 sm:w-5 text-blue-600" />
+                  <h3 className="text-xl sm:text-lg font-semibold text-gray-900">
                     Where are you moving? <span className="text-red-500">*</span>
                   </h3>
                 </div>
 
-                <div className="space-y-4 sm:space-y-6">
-                  <div className="space-y-2">
-                    <Label className="text-sm font-medium text-gray-700">
+                <div className="space-y-6 sm:space-y-4">
+                  <div className="space-y-3 sm:space-y-2">
+                    <Label className="text-base sm:text-sm font-medium text-gray-700">
                       From (Current State) <span className="text-red-500">*</span>
                     </Label>
                     <StateCombobox
@@ -375,15 +377,15 @@ export default function StartPageClient() {
                       error={!!errors.fromState}
                     />
                     {errors.fromState && (
-                      <p className="text-sm text-red-600 flex items-center space-x-1">
-                        <AlertCircle className="h-4 w-4" />
+                      <p className="text-base sm:text-sm text-red-600 flex items-center space-x-2">
+                        <AlertCircle className="h-5 w-5 sm:h-4 sm:w-4" />
                         <span>{errors.fromState}</span>
                       </p>
                     )}
                   </div>
 
-                  <div className="space-y-2">
-                    <Label className="text-sm font-medium text-gray-700">
+                  <div className="space-y-3 sm:space-y-2">
+                    <Label className="text-base sm:text-sm font-medium text-gray-700">
                       To (New State) <span className="text-red-500">*</span>
                     </Label>
                     <StateCombobox
@@ -394,8 +396,8 @@ export default function StartPageClient() {
                       error={!!errors.toState}
                     />
                     {errors.toState && (
-                      <p className="text-sm text-red-600 flex items-center space-x-1">
-                        <AlertCircle className="h-4 w-4" />
+                      <p className="text-base sm:text-sm text-red-600 flex items-center space-x-2">
+                        <AlertCircle className="h-5 w-5 sm:h-4 sm:w-4" />
                         <span>{errors.toState}</span>
                       </p>
                     )}
@@ -405,23 +407,23 @@ export default function StartPageClient() {
 
               {/* Vehicle Types */}
               <div className="space-y-6">
-                <div className="flex items-center space-x-2 pb-2 border-b border-gray-100">
-                  <Car className="h-5 w-5 text-green-600" />
-                  <h3 className="text-lg font-semibold text-gray-900">
+                <div className="flex items-center space-x-3 sm:space-x-2 pb-3 sm:pb-2 border-b border-gray-100">
+                  <Car className="h-6 w-6 sm:h-5 sm:w-5 text-green-600" />
+                  <h3 className="text-xl sm:text-lg font-semibold text-gray-900">
                     What vehicles are you registering? <span className="text-red-500">*</span>
                   </h3>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-4">
                   {VEHICLE_TYPES.map((type) => {
                     const Icon = type.icon
                     const isSelected = vehicleTypes.includes(type.id)
                     const hasError = !!errors.vehicleTypes
 
                     return (
-                      <div key={type.id} className="space-y-3">
+                      <div key={type.id} className="space-y-4 sm:space-y-3">
                         <div
-                          className={`border-2 rounded-xl p-6 cursor-pointer transition-all duration-200 touch-manipulation active:scale-95 ${
+                          className={`border-2 rounded-xl p-8 sm:p-6 cursor-pointer transition-all duration-200 touch-manipulation active:scale-95 ${
                             isSelected
                               ? "border-blue-500 bg-blue-50 shadow-md"
                               : hasError
@@ -430,14 +432,14 @@ export default function StartPageClient() {
                           }`}
                           onClick={() => handleVehicleTypeChange(type.id, !isSelected)}
                         >
-                          <div className="flex flex-col items-center space-y-3">
+                          <div className="flex flex-col items-center space-y-4 sm:space-y-3">
                             <Icon
-                              className={`h-10 w-10 ${
+                              className={`h-12 w-12 sm:h-10 sm:w-10 ${
                                 isSelected ? "text-blue-600" : hasError ? "text-red-400" : "text-gray-400"
                               }`}
                             />
                             <span
-                              className={`text-base font-medium text-center ${
+                              className={`text-lg sm:text-base font-medium text-center ${
                                 isSelected ? "text-blue-900" : hasError ? "text-red-700" : "text-gray-700"
                               }`}
                             >
@@ -445,14 +447,14 @@ export default function StartPageClient() {
                             </span>
                           </div>
                         </div>
-                        <div className="flex items-center justify-center space-x-2">
+                        <div className="flex items-center justify-center space-x-3 sm:space-x-2">
                           <Checkbox
                             id={type.id}
                             checked={isSelected}
                             onCheckedChange={(checked) => handleVehicleTypeChange(type.id, checked as boolean)}
-                            className="h-5 w-5"
+                            className="h-6 w-6 sm:h-5 sm:w-5"
                           />
-                          <Label htmlFor={type.id} className="text-sm text-gray-600 cursor-pointer">
+                          <Label htmlFor={type.id} className="text-base sm:text-sm text-gray-600 cursor-pointer">
                             Select
                           </Label>
                         </div>
@@ -462,8 +464,8 @@ export default function StartPageClient() {
                 </div>
 
                 {errors.vehicleTypes && (
-                  <p className="text-sm text-red-600 flex items-center space-x-1">
-                    <AlertCircle className="h-4 w-4" />
+                  <p className="text-base sm:text-sm text-red-600 flex items-center space-x-2">
+                    <AlertCircle className="h-5 w-5 sm:h-4 sm:w-4" />
                     <span>{errors.vehicleTypes}</span>
                   </p>
                 )}
@@ -471,9 +473,9 @@ export default function StartPageClient() {
 
               {/* Additional Details */}
               <div className="space-y-6">
-                <div className="flex items-center space-x-2 pb-2 border-b border-gray-100">
-                  <Calendar className="h-5 w-5 text-purple-600" />
-                  <h3 className="text-lg font-semibold text-gray-900">Additional Details</h3>
+                <div className="flex items-center space-x-3 sm:space-x-2 pb-3 sm:pb-2 border-b border-gray-100">
+                  <Calendar className="h-6 w-6 sm:h-5 sm:w-5 text-purple-600" />
+                  <h3 className="text-xl sm:text-lg font-semibold text-gray-900">Additional Details</h3>
                 </div>
 
                 <div className="space-y-6 sm:space-y-0 sm:grid sm:grid-cols-1 lg:grid-cols-2 sm:gap-6">
@@ -538,26 +540,32 @@ export default function StartPageClient() {
               </div>
 
               {/* Generate Guide Button */}
-              <div className="pt-4">
+              <div className="pt-6 sm:pt-4">
                 <Button
                   onClick={handleGenerateGuide}
                   disabled={!canGenerateGuide || isSubmitting}
-                  className="w-full h-16 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 active:from-blue-800 active:to-blue-900 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl active:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation"
+                  className="w-full h-20 sm:h-16 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 active:from-blue-800 active:to-blue-900 text-white font-semibold px-6 sm:px-4 text-lg sm:text-base rounded-xl shadow-lg hover:shadow-xl active:shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation group active:scale-[0.98]"
                 >
                   {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white mr-3"></div>
-                      Generating...
-                    </>
+                    <div className="flex items-center justify-center space-x-4 sm:space-x-3">
+                      <div className="relative">
+                        <div className="animate-spin rounded-full h-7 w-7 sm:h-6 sm:w-6 border-2 border-white/30"></div>
+                        <div className="animate-spin rounded-full h-7 w-7 sm:h-6 sm:w-6 border-t-2 border-white absolute top-0 left-0"></div>
+                      </div>
+                      <div className="flex flex-col items-start">
+                        <span className="truncate text-lg sm:text-base">Generating Your Guide...</span>
+                        <span className="text-sm sm:text-xs text-white/80">Analyzing requirements</span>
+                      </div>
+                    </div>
                   ) : (
                     <>
-                      Generate My Registration Guide
-                      <ArrowRight className="ml-3 h-6 w-6" />
+                      <span className="truncate text-lg sm:text-base">Generate My Registration Guide</span>
+                      <ArrowRight className="ml-3 sm:ml-2 h-7 w-7 sm:h-6 sm:w-6 flex-shrink-0 transition-transform group-hover:translate-x-1" />
                     </>
                   )}
                 </Button>
                 {!canGenerateGuide && !isSubmitting && (
-                  <p className="text-sm text-gray-500 text-center mt-3">
+                  <p className="text-base sm:text-sm text-gray-500 text-center mt-4 sm:mt-3 px-4">
                     <span className="text-red-500">*</span> Required fields must be completed to continue
                   </p>
                 )}
