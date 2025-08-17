@@ -2038,9 +2038,9 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
   TN: {
     requiredForms: [
       {
-        name: "Application for Vehicle Title and Registration (Form RV-F1310501)",
+        name: "Application for Vehicle Title and Registration (Form RV-F1310101)",
         description: "Required for titling and registering your vehicle in Tennessee.",
-        url: "/forms/tennessee-rv-f1310501.pdf",
+        url: "/forms/tennessee-rv-f1310101.pdf",
         required: true,
       },
       {
@@ -2058,7 +2058,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
         urgent: true,
       },
       {
-        title: "Complete Form RV-F1310501",
+        title: "Complete Form RV-F1310101",
         description: "Fill out the Application for Vehicle Title and Registration.",
         icon: "FileText",
         urgent: false,
@@ -3047,7 +3047,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Vermont Application for Certificate of Title (VS-119)",
         description: "Required for new Vermont residents to title their vehicle.",
-        url: "/forms/vermont-vs-119.pdf",
+        url: "/forms/vermont-vd-119.pdf",
         required: true,
       },
       {
