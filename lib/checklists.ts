@@ -1026,7 +1026,6 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Vehicle Inspection Report (VIR)",
         description: "Required safety and emissions inspection",
-        url: "/forms/texas-vehicle-inspection-report.pdf",
         required: true,
       },
       {
@@ -1340,7 +1339,6 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Smog Inspection Certificate",
         description: "Most vehicles require a smog inspection before registration.",
-        url: "/forms/california-smog-inspection-certificate.pdf",
         required: true,
       },
       {
@@ -1408,7 +1406,6 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Vehicle Inspection Report",
         description: "All vehicles must pass a safety and emissions inspection annually.",
-        url: "/forms/new-york-vehicle-inspection-report.pdf",
         required: true,
       },
     ],
@@ -1558,7 +1555,6 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Vehicle Inspection Report",
         description: "All vehicles must pass a safety inspection annually.",
-        url: "/forms/virginia-vehicle-inspection-report.pdf",
         required: true,
       },
     ],
@@ -1608,7 +1604,6 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Vehicle Inspection Report",
         description: "All vehicles must pass a safety and emissions inspection annually.",
-        url: "/forms/massachusetts-vehicle-inspection-report.pdf",
         required: true,
       },
     ],
@@ -1703,7 +1698,6 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Michigan No-Fault Auto Insurance",
         description: "Michigan requires no-fault insurance.",
-        url: "/forms/michigan-proof-of-no-fault-auto-insurance.pdf",
         required: true,
       },
     ],
@@ -1805,7 +1799,6 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Vehicle Identification Number (VIN) Inspection",
         description: "Required for out-of-state vehicles.",
-        url: "/forms/oregon-vin-inspection.pdf",
         required: true,
       },
     ],
@@ -1849,7 +1842,6 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Maryland Safety Inspection Certificate",
         description: "Required for all used vehicles before titling and registration.",
-        url: "/forms/maryland-safety-inspection-certificate.pdf",
         required: true,
       },
       {
@@ -1906,7 +1898,6 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Minnesota No-Fault Auto Insurance",
         description: "Minnesota requires no-fault insurance.",
-        url: "/forms/minnesota-proof-of-no-fault-auto-insurance.pdf",
         required: true,
       },
     ],
@@ -1957,7 +1948,6 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "VIN Verification (Form H-13B)",
         description: "Required for out-of-state vehicles, part of the H-13B form.",
-        url: "/forms/connecticut-vin-verification.pdf",
         required: true,
       },
     ],
