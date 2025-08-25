@@ -118,12 +118,7 @@ export default function LandingPageClient() {
               </span>
             </nav>
             <div className="flex items-center space-x-4">
-              <Button
-                variant="ghost"
-                className="hidden sm:inline-flex focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-              >
-                Sign In
-              </Button>
+
               <Button
                 className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transition-all duration-200 border-2 border-blue-500/20 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 asChild
@@ -703,11 +698,7 @@ export default function LandingPageClient() {
             <div>
               <h3 className="font-semibold mb-4">Resources</h3>
               <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="https://example.com/form-130u.pdf" className="hover:text-white transition-colors">
-                    Form 130-U
-                  </Link>
-                </li>
+
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
                     State Requirements
