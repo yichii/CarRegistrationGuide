@@ -317,20 +317,7 @@ function ChecklistContent() {
           )}
 
           {/* Cost Calculator Section */}
-          <section className="mb-12">
-            <div className="flex items-center space-x-2 mb-6">
-              <DollarSign className="h-6 w-6 text-green-600" />
-              <h2 className="text-2xl font-bold text-gray-900">Estimated Costs</h2>
-            </div>
-
-            <CostCalculator
-              fromState={fromState}
-              toState={toState}
-              vehicleTypes={vehicles}
-              isStudent={isStudent}
-              isMilitary={isMilitary}
-            />
-          </section>
+          
 
           {/* Download Section */}
           <section id="download" className="mb-12">
