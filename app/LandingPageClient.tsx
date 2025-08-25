@@ -80,8 +80,10 @@ export default function LandingPageClient() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md">
               <Car className="h-8 w-8 text-blue-600" aria-hidden="true" />
               <span className="text-xl font-bold text-foreground">VehicleReregister</span>
+            </Link>
             </div>
             <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
               <Link
