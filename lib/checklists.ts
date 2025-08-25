@@ -1032,7 +1032,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Texas Auto Insurance",
         description: "Minimum liability coverage required by Texas law",
-        url: "/forms/texas-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1093,7 +1093,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Florida Auto Insurance",
         description: "Minimum Personal Injury Protection (PIP) and Property Damage Liability (PDL) required.",
-        url: "/forms/florida-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1148,7 +1148,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Illinois Auto Insurance",
         description: "Minimum liability coverage required by Illinois law.",
-        url: "/forms/illinois-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1193,7 +1193,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Arizona Auto Insurance",
         description: "Minimum liability coverage required by Arizona law.",
-        url: "/forms/arizona-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1238,7 +1238,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Georgia Auto Insurance",
         description: "Minimum liability coverage required by Georgia law.",
-        url: "/forms/georgia-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1270,7 +1270,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Pennsylvania Auto Insurance",
         description: "Minimum liability coverage required by Pennsylvania law.",
-        url: "/forms/pennsylvania-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1302,7 +1302,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of North Carolina Auto Insurance",
         description: "Minimum liability coverage required by North Carolina law.",
-        url: "/forms/north-carolina-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1346,7 +1346,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of California Auto Insurance",
         description: "Minimum liability coverage required by California law.",
-        url: "/forms/california-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1402,7 +1402,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of New York Auto Insurance",
         description: "Minimum liability coverage required by New York law.",
-        url: "/forms/new-york-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
       {
@@ -1464,7 +1464,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Washington Auto Insurance",
         description: "Minimum liability coverage required by Washington law.",
-        url: "/forms/washington-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1508,7 +1508,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Colorado Auto Insurance",
         description: "Minimum liability coverage required by Colorado law.",
-        url: "/forms/colorado-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1552,7 +1552,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Virginia Auto Insurance",
         description: "Minimum liability coverage required by Virginia law.",
-        url: "/forms/virginia-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
       {
@@ -1602,7 +1602,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Massachusetts Auto Insurance",
         description: "Minimum liability coverage required by Massachusetts law.",
-        url: "/forms/massachusetts-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
       {
@@ -1652,7 +1652,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Ohio Auto Insurance",
         description: "Minimum liability coverage required by Ohio law.",
-        url: "/forms/ohio-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1748,7 +1748,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of New Jersey Auto Insurance",
         description: "Minimum liability coverage required by New Jersey law.",
-        url: "/forms/new-jersey-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1799,7 +1799,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Oregon Auto Insurance",
         description: "Minimum liability coverage required by Oregon law.",
-        url: "/forms/oregon-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
       {
@@ -1855,7 +1855,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Maryland Auto Insurance",
         description: "Minimum liability coverage required by Maryland law.",
-        url: "/forms/maryland-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -1951,7 +1951,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Connecticut Auto Insurance",
         description: "Minimum liability coverage required by Connecticut law.",
-        url: "/forms/connecticut-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
       {
@@ -2001,7 +2001,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Indiana Auto Insurance",
         description: "Minimum liability coverage required by Indiana law.",
-        url: "/forms/indiana-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2046,7 +2046,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Tennessee Auto Insurance",
         description: "Minimum liability coverage required by Tennessee law.",
-        url: "/forms/tennessee-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2084,7 +2084,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Alabama Auto Insurance",
         description: "Minimum liability coverage required by Alabama law.",
-        url: "/forms/alabama-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2122,7 +2122,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Alaska Auto Insurance",
         description: "Minimum liability coverage required by Alaska law.",
-        url: "/forms/alaska-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2160,7 +2160,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Arkansas Auto Insurance",
         description: "Minimum liability coverage required by Arkansas law.",
-        url: "/forms/arkansas-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2204,7 +2204,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Delaware Auto Insurance",
         description: "Minimum liability coverage required by Delaware law.",
-        url: "/forms/delaware-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2248,7 +2248,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Hawaii Auto Insurance",
         description: "Minimum liability coverage required by Hawaii law.",
-        url: "/forms/hawaii-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2292,7 +2292,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Idaho Auto Insurance",
         description: "Minimum liability coverage required by Idaho law.",
-        url: "/forms/idaho-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2336,7 +2336,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Iowa Auto Insurance",
         description: "Minimum liability coverage required by Iowa law.",
-        url: "/forms/iowa-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2374,7 +2374,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Kansas Auto Insurance",
         description: "Minimum liability coverage required by Kansas law.",
-        url: "/forms/kansas-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2418,7 +2418,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Kentucky Auto Insurance",
         description: "Minimum liability coverage required by Kentucky law.",
-        url: "/forms/kentucky-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2462,7 +2462,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Louisiana Auto Insurance",
         description: "Minimum liability coverage required by Louisiana law.",
-        url: "/forms/louisiana-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2506,7 +2506,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Maine Auto Insurance",
         description: "Minimum liability coverage required by Maine law.",
-        url: "/forms/maine-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2550,7 +2550,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Mississippi Auto Insurance",
         description: "Minimum liability coverage required by Mississippi law.",
-        url: "/forms/mississippi-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2594,7 +2594,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Missouri Auto Insurance",
         description: "Minimum liability coverage required by Missouri law.",
-        url: "/forms/missouri-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2638,7 +2638,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Montana Auto Insurance",
         description: "Minimum liability coverage required by Montana law.",
-        url: "/forms/montana-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2676,7 +2676,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Nebraska Auto Insurance",
         description: "Minimum liability coverage required by Nebraska law.",
-        url: "/forms/nebraska-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2720,7 +2720,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Nevada Auto Insurance",
         description: "Minimum liability coverage required by Nevada law.",
-        url: "/forms/nevada-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2757,7 +2757,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of New Hampshire Auto Insurance",
         description: "Minimum liability coverage required by New Hampshire law.",
-        url: "/forms/new-hampshire-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2794,7 +2794,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of New Mexico Auto Insurance",
         description: "Minimum liability coverage required by New Mexico law.",
-        url: "/forms/new-mexico-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2831,7 +2831,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of North Dakota Auto Insurance",
         description: "Minimum liability coverage required by North Dakota law.",
-        url: "/forms/north-dakota-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2868,7 +2868,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Oklahoma Auto Insurance",
         description: "Minimum liability coverage required by Oklahoma law.",
-        url: "/forms/oklahoma-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2905,7 +2905,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Rhode Island Auto Insurance",
         description: "Minimum liability coverage required by Rhode Island law.",
-        url: "/forms/rhode-island-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2942,7 +2942,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of South Carolina Auto Insurance",
         description: "Minimum liability coverage required by South Carolina law.",
-        url: "/forms/south-carolina-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -2979,7 +2979,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of South Dakota Auto Insurance",
         description: "Minimum liability coverage required by South Dakota law.",
-        url: "/forms/south-dakota-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -3016,7 +3016,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Utah Auto Insurance",
         description: "Minimum liability coverage required by Utah law.",
-        url: "/forms/utah-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -3053,7 +3053,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Vermont Auto Insurance",
         description: "Minimum liability coverage required by Vermont law.",
-        url: "/forms/vermont-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -3090,7 +3090,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of West Virginia Auto Insurance",
         description: "Minimum liability coverage required by West Virginia law.",
-        url: "/forms/west-virginia-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -3127,7 +3127,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Wisconsin Auto Insurance",
         description: "Minimum liability coverage required by Wisconsin law.",
-        url: "/forms/wisconsin-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
@@ -3164,7 +3164,7 @@ export const ENTRY_STATE_DATA: Record<string, EntryStateData> = {
       {
         name: "Proof of Wyoming Auto Insurance",
         description: "Minimum liability coverage required by Wyoming law.",
-        url: "/forms/wyoming-proof-of-auto-insurance.pdf",
+        
         required: true,
       },
     ],
