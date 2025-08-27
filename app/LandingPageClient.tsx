@@ -145,12 +145,11 @@ export default function LandingPageClient() {
               id="hero-heading"
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
             >
-              Simplify Vehicle Registration
-              <span className="text-blue-600 block">in Minutes, Not Hours</span>
+              Re-Register Your Car With Confidence
+              <span className="text-blue-600 block">Skip DMV Confusion</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-              Skip the DMV lines and paperwork hassles. Our automated platform handles vehicle re-registration,
-              renewals, and transfers with just a few clicks.
+              Get the right forms and step-by-step instructions before you visit the DMV.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <HeroForm />

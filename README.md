@@ -1,28 +1,30 @@
-# VehicleReregister
+# Vehicle Reregister Landing
 
-TurboTax-style guide to re-register your vehicle when moving states.
+*Automatically synced with your [v0.app](https://v0.app) deployments*
 
-[![CI](https://img.shields.io/github/actions/workflow/status/yichii/vehiclereregister/ci.yml?branch=main)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)]()
-[![Vercel](https://img.shields.io/badge/Deploy-Vercel-black.svg)]()
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/naz-diams-projects/v0-vehicle-reregister-landing)
+[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/OLadjeXfHLY)
 
-## Tech
-Next.js (App Router) • TypeScript • Tailwind v4 • shadcn/ui
+## Overview
 
-## Quickstart
-pnpm i
-pnpm dev
-open http://localhost:3000
+This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
+Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
 
-## Scripts
-- `pnpm dev`: local dev
-- `pnpm build`: production build
-- `pnpm start`: start prod
-- `pnpm lint`: eslint + typecheck
-- `pnpm format`: prettier
+## Deployment
 
-## Environment
-Copy `.env.example` → `.env.local` and fill values.
+Your project is live at:
 
-## Disclaimer
-Not affiliated with any DMV or government agency.
+**[https://vercel.com/naz-diams-projects/v0-vehicle-reregister-landing](https://vercel.com/naz-diams-projects/v0-vehicle-reregister-landing)**
+
+## Build your app
+
+Continue building your app on:
+
+**[https://v0.app/chat/projects/OLadjeXfHLY](https://v0.app/chat/projects/OLadjeXfHLY)**
+
+## How It Works
+
+1. Create and modify your project using [v0.app](https://v0.app)
+2. Deploy your chats from the v0 interface
+3. Changes are automatically pushed to this repository
+4. Vercel deploys the latest version from this repository
