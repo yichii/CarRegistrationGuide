@@ -498,6 +498,7 @@ export default function StartPageClient() {
                     </Select>
                   </div>
 
+                  {/*
                   <div className="space-y-4">
                     <Label className="text-sm font-medium text-gray-700">Special Circumstances</Label>
                     <div className="space-y-4">
@@ -535,7 +536,8 @@ export default function StartPageClient() {
                         </Label>
                       </div>
                     </div>
-                  </div>
+                  </div> 
+                  */}
                 </div>
               </div>
 
