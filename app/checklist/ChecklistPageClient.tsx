@@ -175,35 +175,42 @@ function ChecklistContent() {
               {requiredForms.map((form, index) => (
                 <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                   <CardContent className="p-6">
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-3 mb-2">
-                          <h3 className="text-lg font-semibold text-gray-900">{form.name}</h3>
-                          {form.required && (
-                            <Badge variant="destructive" className="bg-red-100 text-red-700 border-red-200">
-                              Required
-                            </Badge>
-                          )}
-                        </div>
-                        <p className="text-gray-600">{form.description}</p>
+                    <div className="flex flex-wrap items-start gap-3 sm:gap-4">
+                    {/* LEFT: text */}
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <h3 className="text-lg font-semibold text-gray-900 break-words">{form.name}</h3>
+                        {form.required && (
+                          <Badge
+                            variant="destructive"
+                            className="bg-red-100 text-red-700 border-red-200 shrink-0"
+                          >
+                            Required
+                          </Badge>
+                        )}
                       </div>
-                      {form.url && (
-                        <div className="ml-4 flex space-x-2">
-                          <Button variant="outline" className="bg-transparent" asChild>
-                            <a href={form.url} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="h-4 w-4 mr-2" />
-                              View Form
-                            </a>
-                          </Button>
-                          <Button variant="ghost" size="sm" asChild>
-                            <a href={form.url} download>
-                              <Download className="h-4 w-4 mr-2" />
-                              Download
-                            </a>
-                          </Button>
-                        </div>
-                      )}
+                      <p className="text-gray-600 break-words">{form.description}</p>
                     </div>
+
+                    {/* RIGHT: actions */}
+                    {form.url && (
+                      <div className="flex flex-wrap gap-2 sm:ml-4 shrink-0 w-full sm:w-auto">
+                        <Button variant="outline" className="bg-transparent whitespace-nowrap" asChild>
+                          <a href={form.url} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            View Form
+                          </a>
+                        </Button>
+                        <Button variant="ghost" size="sm" className="whitespace-nowrap" asChild>
+                          <a href={form.url} download>
+                            <Download className="h-4 w-4 mr-2" />
+                            Download
+                          </a>
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+
                   </CardContent>
                 </Card>
               ))}
