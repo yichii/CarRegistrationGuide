@@ -80,10 +80,13 @@ export default function LandingPageClient() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-            <Link href="/" className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md">
-              <Car className="h-8 w-8 text-blue-600" aria-hidden="true" />
-              <span className="text-xl font-bold text-foreground">VehicleReregister</span>
-            </Link>
+              <Link
+                href="/"
+                className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md"
+              >
+                <Car className="h-8 w-8 text-blue-600" aria-hidden="true" />
+                <span className="text-xl font-bold text-foreground">CarRegistrationGuide</span>
+              </Link>
             </div>
             <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
               <Link
@@ -120,7 +123,6 @@ export default function LandingPageClient() {
               </span>
             </nav>
             <div className="flex items-center space-x-4">
-
               <Button
                 className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transition-all duration-200 border-2 border-blue-500/20 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 asChild
@@ -219,7 +221,7 @@ export default function LandingPageClient() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 id="how-it-works-heading" className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              How VehicleReregister Works
+              How CarRegistrationGuide Works
             </h2>
           </div>
 
@@ -583,7 +585,7 @@ export default function LandingPageClient() {
 
                 <LazyAccordionItem value="item-2" className="bg-card rounded-lg shadow-lg border-0 px-6">
                   <LazyAccordionTrigger className="text-left font-semibold text-lg hover:no-underline py-6 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md">
-                    Is VehicleReregister free to use?
+                    Is CarRegistrationGuide free to use?
                   </LazyAccordionTrigger>
                   <LazyAccordionContent className="text-muted-foreground pb-6 leading-relaxed">
                     Yes. The core checklist and form guidance are completely free. In the future, we may offer optional
@@ -671,8 +673,8 @@ export default function LandingPageClient() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Car className="h-8 w-8 text-blue-400" />
-                <span className="text-xl font-bold">VehicleReregister</span>
+                <Car className="h-8 w-8 text-blue-400" aria-hidden="true" />
+                <span className="text-xl font-bold">CarRegistrationGuide</span>
               </div>
               <p className="text-gray-400">Simplifying vehicle registration guidance for interstate moves.</p>
             </div>
@@ -699,7 +701,6 @@ export default function LandingPageClient() {
             <div>
               <h3 className="font-semibold mb-4">Resources</h3>
               <ul className="space-y-2 text-gray-400">
-
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
                     State Requirements
@@ -733,14 +734,14 @@ export default function LandingPageClient() {
           <div className="border-t border-gray-800 pt-8">
             <div className="bg-gray-800 rounded-lg p-4 mb-4">
               <p className="text-sm text-gray-300 leading-relaxed">
-                <strong>Disclaimer:</strong> VehicleReregister is an independent service and is not affiliated with any
-                Department of Motor Vehicles (DMV), state agency, or government entity. We do not submit registration
-                paperwork on your behalf. We provide informational checklists and form guidance to help you complete the
-                process yourself.
+                <strong>Disclaimer:</strong> CarRegistrationGuide is an independent service and is not affiliated with
+                any Department of Motor Vehicles (DMV), state agency, or government entity. We do not submit
+                registration paperwork on your behalf. We provide informational checklists and form guidance to help you
+                complete the process yourself.
               </p>
             </div>
             <div className="text-center text-gray-400">
-              <p>&copy; 2024 VehicleReregister. All rights reserved.</p>
+              <p>© 2025 CarRegistrationGuide. All rights reserved.</p>
             </div>
           </div>
         </div>

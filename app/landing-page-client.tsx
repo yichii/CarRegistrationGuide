@@ -32,7 +32,7 @@ export default function LandingPageClient() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
               <Car className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold text-gray-900">VehicleReregister</span>
+              <span className="text-xl font-bold text-gray-900">CarRegistrationGuide</span>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
               <Link href="#how-it-works" className="text-gray-600 hover:text-gray-900 transition-colors">
@@ -109,7 +109,7 @@ export default function LandingPageClient() {
       <section id="how-it-works" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How VehicleReregister Works</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How CarRegistrationGuide Works</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -427,7 +427,7 @@ export default function LandingPageClient() {
 
               <AccordionItem value="item-2" className="bg-white rounded-lg shadow-lg border-0 px-6">
                 <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline py-6">
-                  Is VehicleReregister free to use?
+                  Is CarRegistrationGuide free to use?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600 pb-6 leading-relaxed">
                   Yes. The core checklist and form guidance are completely free. In the future, we may offer optional
@@ -499,7 +499,7 @@ export default function LandingPageClient() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Car className="h-8 w-8 text-blue-400" />
-                <span className="text-xl font-bold">VehicleReregister</span>
+                <span className="text-xl font-bold">CarRegistrationGuide</span>
               </div>
               <p className="text-gray-400">Simplifying vehicle registration guidance for interstate moves.</p>
             </div>
@@ -564,14 +564,14 @@ export default function LandingPageClient() {
           <div className="border-t border-gray-800 pt-8">
             <div className="bg-gray-800 rounded-lg p-4 mb-4">
               <p className="text-sm text-gray-300 leading-relaxed">
-                <strong>Disclaimer:</strong> VehicleReregister is an independent service and is not affiliated with any
-                Department of Motor Vehicles (DMV), state agency, or government entity. We do not submit registration
-                paperwork on your behalf. We provide informational checklists and form guidance to help you complete the
-                process yourself.
+                <strong>Disclaimer:</strong> CarRegistrationGuide is an independent service and is not affiliated with
+                any Department of Motor Vehicles (DMV), state agency, or government entity. We do not submit
+                registration paperwork on your behalf. We provide informational checklists and form guidance to help you
+                complete the process yourself.
               </p>
             </div>
             <div className="text-center text-gray-400">
-              <p>&copy; 2024 VehicleReregister. All rights reserved.</p>
+              <p>&copy; 2025 CarRegistrationGuide. All rights reserved.</p>
             </div>
           </div>
         </div>

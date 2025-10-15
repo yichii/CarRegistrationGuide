@@ -9,16 +9,16 @@ export const metadata: Metadata = {
     "vehicle registration checklist",
     "interstate move form",
     "DMV requirements",
-    "car registration guide",
+    "carregistrationguide",
     "vehicle registration wizard",
     "state-to-state vehicle registration",
   ],
   openGraph: {
-    title: "Get Started - Create Your Vehicle Registration Checklist | VehicleReregister",
+    title: "Get Started - Create Your Vehicle Registration Checklist | CarRegistrationGuide",
     description:
       "Tell us about your interstate move and get a personalized vehicle registration checklist. Select your states, vehicle types, and special circumstances.",
     type: "website",
-    url: "https://vehiclereregister.com/start",
+    url: "https://carregistrationguide.com/start",
     images: [
       {
         url: "/og-image-start.jpg",

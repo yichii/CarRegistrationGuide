@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import { Work_Sans, Open_Sans } from "next/font/google"
 import "./globals.css"
 import { ErrorBoundary } from "@/components/error-boundary"
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -20,8 +22,8 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "VehicleReregister - Simplify Vehicle Registration for Interstate Moves",
-    template: "%s | VehicleReregister",
+    default: "CarRegistrationGuide - Simplify Vehicle Registration for Interstate Moves",
+    template: "%s | CarRegistrationGuide",
   },
   description:
     "Get personalized vehicle registration checklists for interstate moves. Skip DMV confusion with step-by-step guides, required forms, and deadlines for all 50 states.",
@@ -35,42 +37,42 @@ export const metadata: Metadata = {
     "moving checklist",
     "vehicle re-registration",
   ],
-  authors: [{ name: "VehicleReregister Team" }],
-  creator: "VehicleReregister",
-  publisher: "VehicleReregister",
+  authors: [{ name: "CarRegistrationGuide Team" }],
+  creator: "CarRegistrationGuide",
+  publisher: "CarRegistrationGuide",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://vehiclereregister.com"),
+  metadataBase: new URL("https://carregistrationguide.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://vehiclereregister.com",
-    title: "VehicleReregister - Simplify Vehicle Registration for Interstate Moves",
+    url: "https://carregistrationguide.com",
+    title: "CarRegistrationGuide - Simplify Vehicle Registration for Interstate Moves",
     description:
       "Get personalized vehicle registration checklists for interstate moves. Skip DMV confusion with step-by-step guides, required forms, and deadlines for all 50 states.",
-    siteName: "VehicleReregister",
+    siteName: "CarRegistrationGuide",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "VehicleReregister - Vehicle Registration Made Simple",
+        alt: "CarRegistrationGuide - Vehicle Registration Made Simple",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "VehicleReregister - Simplify Vehicle Registration for Interstate Moves",
+    title: "CarRegistrationGuide - Simplify Vehicle Registration for Interstate Moves",
     description:
       "Get personalized vehicle registration checklists for interstate moves. Skip DMV confusion with step-by-step guides, required forms, and deadlines for all 50 states.",
     images: ["/og-image.jpg"],
-    creator: "@vehiclereregister",
+    creator: "@carregistrationguide",
   },
   robots: {
     index: true,
@@ -104,10 +106,10 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "VehicleReregister",
+              name: "CarRegistrationGuide",
               description:
                 "Get personalized vehicle registration checklists for interstate moves. Skip DMV confusion with step-by-step guides, required forms, and deadlines for all 50 states.",
-              url: "https://vehiclereregister.com",
+              url: "https://carregistrationguide.com",
               applicationCategory: "UtilityApplication",
               operatingSystem: "Web Browser",
               offers: {
@@ -117,8 +119,8 @@ export default function RootLayout({
               },
               provider: {
                 "@type": "Organization",
-                name: "VehicleReregister",
-                url: "https://vehiclereregister.com",
+                name: "CarRegistrationGuide",
+                url: "https://carregistrationguide.com",
               },
               featureList: [
                 "Personalized vehicle registration checklists",
@@ -204,6 +206,8 @@ html {
       </head>
       <body>
         <ErrorBoundary>{children}</ErrorBoundary>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
