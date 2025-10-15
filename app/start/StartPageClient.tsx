@@ -308,7 +308,7 @@ export default function StartPageClient() {
           <div className="flex justify-between items-center h-20 sm:h-16">
             <Link href="/" className="flex items-center space-x-3 sm:space-x-2">
               <Car className="h-8 w-8 sm:h-7 sm:w-7 text-blue-600" />
-              <span className="text-xl sm:text-lg font-bold text-gray-900">VehicleReregister</span>
+              <span className="text-xl sm:text-lg font-bold text-gray-900">CarRegistrationGuide</span>
             </Link>
             <div className="flex items-center space-x-3 sm:space-x-4">
               <div className="hidden sm:block">
@@ -332,7 +332,7 @@ export default function StartPageClient() {
           {/* Header */}
           <div className="text-center mb-10 sm:mb-8">
             <h1 className="text-3xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-3 leading-tight px-2">
-              Let's get your vehicle registered in your new state
+              Get your personalized vehicle registration guide
             </h1>
             <p className="text-xl sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
               Answer a few questions and we'll generate a custom checklist for you.

@@ -17,9 +17,9 @@ export default function FAQPageClient() {
       icon: <Shield className="h-5 w-5" />,
       questions: [
         {
-          question: "What is VehicleReregister?",
+          question: "What is CarRegistrationGuide?",
           answer:
-            "VehicleReregister is an independent service that provides personalized checklists and guidance for vehicle registration when moving between states. We help you understand exactly what forms, documents, and steps are required for your specific situation.",
+            "CarRegistrationGuide is an independent service that provides personalized checklists and guidance for vehicle registration when moving between states. We help you understand exactly what forms, documents, and steps are required for your specific situation.",
         },
         {
           question: "Do you file paperwork for me?",
@@ -29,10 +29,10 @@ export default function FAQPageClient() {
         {
           question: "Are you affiliated with the DMV?",
           answer:
-            "No, VehicleReregister is not affiliated with any DMV, state agency, or government entity. We are an independent service that helps simplify the vehicle registration process by providing clear, organized guidance.",
+            "No, CarRegistrationGuide is not affiliated with any DMV, state agency, or government entity. We are an independent service that helps simplify the vehicle registration process by providing clear, organized guidance.",
         },
         {
-          question: "Is VehicleReregister free to use?",
+          question: "Is CarRegistrationGuide free to use?",
           answer:
             "Yes, our core service is completely free. You can generate personalized checklists, download forms, and access all guidance at no cost. We may offer optional premium features in the future.",
         },
@@ -165,7 +165,7 @@ export default function FAQPageClient() {
               </Button>
               <div className="flex items-center space-x-2">
                 <Car className="h-8 w-8 text-blue-600" />
-                <span className="text-xl font-bold text-gray-900">VehicleReregister</span>
+                <span className="text-xl font-bold text-gray-900">CarRegistrationGuide</span>
               </div>
             </div>
             <Button className="bg-blue-600 hover:bg-blue-700" asChild>

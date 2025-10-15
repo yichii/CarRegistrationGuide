@@ -22,7 +22,7 @@ export async function generateMetadata({
       : "Get your personalized vehicle registration checklist with required forms, deadlines, and step-by-step instructions for your interstate move."
 
   return {
-    title,
+    title: `${title} | CarRegistrationGuide`,
     description,
     keywords: [
       `${fromStateName} to ${toStateName} vehicle registration`,
@@ -34,10 +34,10 @@ export async function generateMetadata({
       "car registration requirements",
     ],
     openGraph: {
-      title: `${title} | VehicleReregister`,
+      title: `${title} | CarRegistrationGuide`,
       description,
       type: "website",
-      url: `https://vehiclereregister.com/checklist?from=${fromState}&to=${toState}`,
+      url: `https://carregistrationguide.com/checklist?from=${fromState}&to=${toState}`,
       images: [
         {
           url: "/og-image-checklist.jpg",

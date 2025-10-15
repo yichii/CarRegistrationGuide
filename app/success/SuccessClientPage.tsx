@@ -35,7 +35,7 @@ function SuccessContent() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2">
               <Car className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold text-gray-900">VehicleReregister</span>
+              <span className="text-xl font-bold text-gray-900">CarRegistrationGuide</span>
             </Link>
             {/* No progress steps on success page */}
           </div>

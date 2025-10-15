@@ -26,7 +26,7 @@ export default function HelpPageClient() {
     {
       title: "Getting Started",
       icon: <MapPin className="h-6 w-6" />,
-      description: "Learn how to use VehicleReregister and get your personalized checklist",
+      description: "Learn how to use CarRegistrationGuide and get your personalized checklist",
       articles: [
         { title: "How to create your checklist", href: "#getting-started" },
         { title: "Understanding your results", href: "#understanding-results" },
@@ -108,12 +108,11 @@ export default function HelpPageClient() {
               <Button variant="ghost" size="sm" asChild>
                 <Link href="/">
                   <ArrowLeft className="h-4 w-4 mr-2" />
-                  Back to Home
                 </Link>
               </Button>
               <div className="flex items-center space-x-2">
                 <Car className="h-8 w-8 text-blue-600" />
-                <span className="text-xl font-bold text-gray-900">VehicleReregister</span>
+                <span className="text-xl font-bold text-gray-900">CarRegistrationGuide</span>
               </div>
             </div>
             <Button className="bg-blue-600 hover:bg-blue-700" asChild>

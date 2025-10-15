@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import FAQPageClient from "./FAQPageClient"
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | VehicleReregister",
+  title: "Frequently Asked Questions | CarRegistrationGuide",
   description:
     "Get answers to common questions about vehicle registration, interstate moves, DMV requirements, and our service.",
   keywords: "vehicle registration FAQ, DMV questions, interstate move help, car registration answers",

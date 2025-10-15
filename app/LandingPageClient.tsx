@@ -241,9 +241,6 @@ export default function LandingPageClient() {
                   <MapPin className="h-8 w-8 text-blue-600" aria-hidden="true" />
                 </div>
                 <div className="flex items-center justify-center space-x-2 mb-2">
-                  <span className="text-2xl" role="img" aria-label="Road">
-                    🛣️
-                  </span>
                   <CardTitle className="text-xl">Tell us where you're moving</CardTitle>
                 </div>
                 <CardDescription className="text-base">
@@ -267,9 +264,6 @@ export default function LandingPageClient() {
                   <FileText className="h-8 w-8 text-green-600" aria-hidden="true" />
                 </div>
                 <div className="flex items-center justify-center space-x-2 mb-2">
-                  <span className="text-2xl" role="img" aria-label="Clipboard">
-                    📋
-                  </span>
                   <CardTitle className="text-xl">Get your custom checklist</CardTitle>
                 </div>
                 <CardDescription className="text-base">
@@ -293,9 +287,6 @@ export default function LandingPageClient() {
                   <Clock className="h-8 w-8 text-purple-600" aria-hidden="true" />
                 </div>
                 <div className="flex items-center justify-center space-x-2 mb-2">
-                  <span className="text-2xl" role="img" aria-label="Receipt">
-                    🧾
-                  </span>
                   <CardTitle className="text-xl">Download forms & get reminders</CardTitle>
                 </div>
                 <CardDescription className="text-base">

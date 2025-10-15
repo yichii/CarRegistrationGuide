@@ -81,7 +81,7 @@ export default function ContactPageClient() {
               </Button>
               <div className="flex items-center space-x-2">
                 <Car className="h-8 w-8 text-blue-600" />
-                <span className="text-xl font-bold text-gray-900">VehicleReregister</span>
+                <span className="text-xl font-bold text-gray-900">CarRegistrationGuide</span>
               </div>
             </div>
             <Button className="bg-blue-600 hover:bg-blue-700" asChild>

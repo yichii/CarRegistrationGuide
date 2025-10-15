@@ -118,7 +118,7 @@ function ChecklistContent() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2">
               <Car className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold text-gray-900">VehicleReregister</span>
+              <span className="text-xl font-bold text-gray-900">CarRegistrationGuide</span>
             </Link>
             <ProgressSteps currentStep={2} totalSteps={2} />
           </div>
@@ -176,41 +176,37 @@ function ChecklistContent() {
                 <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex flex-wrap items-start gap-3 sm:gap-4">
-                    {/* LEFT: text */}
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <h3 className="text-lg font-semibold text-gray-900 break-words">{form.name}</h3>
-                        {form.required && (
-                          <Badge
-                            variant="destructive"
-                            className="bg-red-100 text-red-700 border-red-200 shrink-0"
-                          >
-                            Required
-                          </Badge>
-                        )}
+                      {/* LEFT: text */}
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <h3 className="text-lg font-semibold text-gray-900 break-words">{form.name}</h3>
+                          {form.required && (
+                            <Badge variant="destructive" className="bg-red-100 text-red-700 border-red-200 shrink-0">
+                              Required
+                            </Badge>
+                          )}
+                        </div>
+                        <p className="text-gray-600 break-words">{form.description}</p>
                       </div>
-                      <p className="text-gray-600 break-words">{form.description}</p>
+
+                      {/* RIGHT: actions */}
+                      {form.url && (
+                        <div className="flex flex-wrap gap-2 sm:ml-4 shrink-0 w-full sm:w-auto">
+                          <Button variant="outline" className="bg-transparent whitespace-nowrap" asChild>
+                            <a href={form.url} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-4 w-4 mr-2" />
+                              View Form
+                            </a>
+                          </Button>
+                          <Button variant="ghost" size="sm" className="whitespace-nowrap" asChild>
+                            <a href={form.url} download>
+                              <Download className="h-4 w-4 mr-2" />
+                              Download
+                            </a>
+                          </Button>
+                        </div>
+                      )}
                     </div>
-
-                    {/* RIGHT: actions */}
-                    {form.url && (
-                      <div className="flex flex-wrap gap-2 sm:ml-4 shrink-0 w-full sm:w-auto">
-                        <Button variant="outline" className="bg-transparent whitespace-nowrap" asChild>
-                          <a href={form.url} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4 mr-2" />
-                            View Form
-                          </a>
-                        </Button>
-                        <Button variant="ghost" size="sm" className="whitespace-nowrap" asChild>
-                          <a href={form.url} download>
-                            <Download className="h-4 w-4 mr-2" />
-                            Download
-                          </a>
-                        </Button>
-                      </div>
-                    )}
-                  </div>
-
                   </CardContent>
                 </Card>
               ))}
@@ -324,7 +320,13 @@ function ChecklistContent() {
           )}
 
           {/* Cost Calculator Section */}
-          
+          <section className="mb-12">
+            <div className="flex items-center space-x-2 mb-6">
+              <DollarSign className="h-6 w-6 text-blue-600" />
+              <h2 className="text-2xl font-bold text-gray-900">Cost Calculator</h2>
+            </div>
+            <CostCalculator />
+          </section>
 
           {/* Download Section */}
           <section id="download" className="mb-12">

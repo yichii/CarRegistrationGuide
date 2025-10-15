@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import ContactPageClient from "./ContactPageClient"
 
 export const metadata: Metadata = {
-  title: "Contact Support | VehicleReregister",
+  title: "Contact Support | CarRegistrationGuide",
   description:
     "Get help with vehicle registration questions. Contact our support team for personalized assistance with your interstate move.",
   keywords: "contact support, vehicle registration help, DMV assistance, customer service",
