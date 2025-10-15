@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import HelpPageClient from "./HelpPageClient"
 
 export const metadata: Metadata = {
-  title: "Help Center | CarRegistrationGuide",
+  title: "Help Center | VehicleReregister",
   description:
     "Find comprehensive guides, tutorials, and resources for vehicle registration when moving between states.",
   keywords: "help center, vehicle registration guides, DMV help, interstate move resources",

@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   description:
     "Your personalized vehicle registration checklist has been generated successfully. Download your PDF guide or view your step-by-step instructions online.",
   openGraph: {
-    title: "Success - Your Vehicle Registration Checklist is Ready | CarRegistrationGuide",
+    title: "Success - Your Vehicle Registration Checklist is Ready | VehicleReregister",
     description:
       "Your personalized vehicle registration checklist has been generated successfully. Download your PDF guide or view your step-by-step instructions.",
     type: "website",
-    url: "https://carregistrationguide.com/success",
+    url: "https://vehiclereregister.com/success",
     images: [
       {
         url: "/og-image-success.jpg",

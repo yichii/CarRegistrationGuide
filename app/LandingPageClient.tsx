@@ -8,11 +8,11 @@ import {
   MapPin,
   FileText,
   Clock,
-  Shield,
+  CalendarFoldIcon,Shield,
   Users,
   ArrowRight,
-  CheckCircle,
-  Star,
+  BookCheckIcon,CheckCircle,
+  TimerIcon,Star,
   Zap,
   Target,
 } from "lucide-react"
@@ -147,7 +147,7 @@ export default function LandingPageClient() {
               id="hero-heading"
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
             >
-              Re-Register Your Car With Confidence
+              Interstate Vehicle Registration Guide
               <span className="text-blue-600 block">Skip DMV Confusion</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -165,22 +165,22 @@ export default function LandingPageClient() {
                 className="flex items-center bg-green-50 px-4 py-2 rounded-full border border-green-200"
                 role="listitem"
               >
-                <CheckCircle className="h-5 w-5 text-green-600 mr-2" aria-hidden="true" />
-                <span className="text-green-800 font-medium">No DMV visits required</span>
+                <BookCheckIcon className="h-5 w-5 text-green-600 mr-2" aria-hidden="true" />
+                <span className="text-green-800 font-medium">Personalized guide</span>
               </div>
               <div
                 className="flex items-center bg-blue-50 px-4 py-2 rounded-full border border-blue-200"
                 role="listitem"
               >
-                <Shield className="h-5 w-5 text-blue-600 mr-2" aria-hidden="true" />
-                <span className="text-blue-800 font-medium">100% secure & compliant</span>
+                <CalendarFoldIcon className="h-5 w-5 text-blue-600 mr-2" aria-hidden="true" />
+                <span className="text-blue-800 font-medium">Up-to-date info</span>
               </div>
               <div
                 className="flex items-center bg-purple-50 px-4 py-2 rounded-full border border-purple-200"
                 role="listitem"
               >
-                <Star className="h-5 w-5 text-purple-600 mr-2" aria-hidden="true" />
-                <span className="text-purple-800 font-medium">Money-back guarantee</span>
+                <TimerIcon className="h-5 w-5 text-purple-600 mr-2" aria-hidden="true" />
+                <span className="text-purple-800 font-medium">Instant results</span>
               </div>
             </div>
           </div>
@@ -241,6 +241,9 @@ export default function LandingPageClient() {
                   <MapPin className="h-8 w-8 text-blue-600" aria-hidden="true" />
                 </div>
                 <div className="flex items-center justify-center space-x-2 mb-2">
+                  <span className="text-2xl" role="img" aria-label="Road">
+                    🛣️
+                  </span>
                   <CardTitle className="text-xl">Tell us where you're moving</CardTitle>
                 </div>
                 <CardDescription className="text-base">
@@ -264,6 +267,9 @@ export default function LandingPageClient() {
                   <FileText className="h-8 w-8 text-green-600" aria-hidden="true" />
                 </div>
                 <div className="flex items-center justify-center space-x-2 mb-2">
+                  <span className="text-2xl" role="img" aria-label="Clipboard">
+                    📋
+                  </span>
                   <CardTitle className="text-xl">Get your custom checklist</CardTitle>
                 </div>
                 <CardDescription className="text-base">
@@ -287,6 +293,9 @@ export default function LandingPageClient() {
                   <Clock className="h-8 w-8 text-purple-600" aria-hidden="true" />
                 </div>
                 <div className="flex items-center justify-center space-x-2 mb-2">
+                  <span className="text-2xl" role="img" aria-label="Receipt">
+                    🧾
+                  </span>
                   <CardTitle className="text-xl">Download forms & get reminders</CardTitle>
                 </div>
                 <CardDescription className="text-base">
@@ -662,12 +671,12 @@ export default function LandingPageClient() {
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
+            <div className="my-0 px-0">
               <div className="flex items-center space-x-2 mb-4">
                 <Car className="h-8 w-8 text-blue-400" aria-hidden="true" />
                 <span className="text-xl font-bold">CarRegistrationGuide</span>
               </div>
-              <p className="text-gray-400">Simplifying vehicle registration guidance for interstate moves.</p>
+              <p className="text-gray-400 px-0">Simplifying vehicle registration guidance for interstate moves.</p>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Service</h3>
