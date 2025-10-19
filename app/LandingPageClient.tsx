@@ -8,13 +8,16 @@ import {
   MapPin,
   FileText,
   Clock,
-  CalendarFoldIcon,Shield,
+  CalendarFoldIcon,
+  Shield,
   Users,
   ArrowRight,
-  BookCheckIcon,CheckCircle,
-  TimerIcon,Star,
+  BookCheckIcon,
+  CheckCircle,
+  TimerIcon,
   Zap,
   Target,
+  BookOpen,
 } from "lucide-react"
 import Link from "next/link"
 import { useState, lazy, Suspense } from "react"
@@ -109,6 +112,17 @@ export default function LandingPageClient() {
               </Link>
               <span id="example-desc" className="sr-only">
                 See a sample checklist for California to Texas move
+              </span>
+
+              <Link
+                href="/blog"
+                className="text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md px-2 py-1"
+                aria-describedby="blog-desc"
+              >
+                Blog
+              </Link>
+              <span id="blog-desc" className="sr-only">
+                Read helpful articles about vehicle registration
               </span>
 
               <Link
@@ -488,6 +502,116 @@ export default function LandingPageClient() {
         </div>
       </section>
 
+      <section className="py-20 bg-background" aria-labelledby="blog-heading">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center space-x-3 mb-4">
+              <BookOpen className="h-8 w-8 text-blue-600" aria-hidden="true" />
+              <h2 id="blog-heading" className="text-3xl sm:text-4xl font-bold text-foreground">
+                Helpful Resources & Guides
+              </h2>
+            </div>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Expert tips and detailed guides to help you navigate vehicle registration across all 50 states
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-2">
+                  <CalendarFoldIcon className="h-4 w-4" aria-hidden="true" />
+                  <span>State Guides</span>
+                </div>
+                <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">
+                  <Link href="/blog/california-to-texas-registration" className="hover:underline">
+                    Moving from California to Texas: Complete Registration Guide
+                  </Link>
+                </CardTitle>
+                <CardDescription className="text-base">
+                  Everything you need to know about registering your vehicle when moving from CA to TX, including forms,
+                  fees, and deadlines.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="ghost" className="group-hover:bg-blue-50 transition-colors" asChild>
+                  <Link href="/blog/california-to-texas-registration">
+                    Read More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-2">
+                  <FileText className="h-4 w-4" aria-hidden="true" />
+                  <span>Title Transfers</span>
+                </div>
+                <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">
+                  <Link href="/blog/understanding-vehicle-title-transfers" className="hover:underline">
+                    Understanding Vehicle Title Transfers: A Complete Guide
+                  </Link>
+                </CardTitle>
+                <CardDescription className="text-base">
+                  Learn the ins and outs of transferring your vehicle title when moving states, including common
+                  pitfalls to avoid.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="ghost" className="group-hover:bg-blue-50 transition-colors" asChild>
+                  <Link href="/blog/understanding-vehicle-title-transfers">
+                    Read More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-2">
+                  <CheckCircle className="h-4 w-4" aria-hidden="true" />
+                  <span>Inspections</span>
+                </div>
+                <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">
+                  <Link href="/blog/vin-inspection-requirements" className="hover:underline">
+                    VIN Inspection Requirements by State
+                  </Link>
+                </CardTitle>
+                <CardDescription className="text-base">
+                  Discover which states require VIN inspections, where to get them, and what to expect during the
+                  process.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button variant="ghost" className="group-hover:bg-blue-50 transition-colors" asChild>
+                  <Link href="/blog/vin-inspection-requirements">
+                    Read More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-transparent hover:bg-blue-50 border-2 border-blue-600 text-blue-600 hover:text-blue-700"
+              asChild
+            >
+              <Link href="/blog">
+                View All Articles
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Trust / Transparency Section */}
       <section id="about" className="py-20 bg-muted/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -701,6 +825,11 @@ export default function LandingPageClient() {
             <div>
               <h3 className="font-semibold mb-4">Resources</h3>
               <ul className="space-y-2 text-gray-400">
+                <li>
+                  <Link href="/blog" className="hover:text-white transition-colors">
+                    Blog
+                  </Link>
+                </li>
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
                     State Requirements
