@@ -8,8 +8,8 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import type { BlogPost } from "@/lib/blog"
-import ReactMarkdown from "react-markdown"
-import remarkGfm from "remark-gfm"
+import { MDXRemote } from "next-mdx-remote/rsc"
+import { mdxComponents } from "@/components/mdx/MDXComponents"
 
 interface BlogPostClientProps {
   post: BlogPost
@@ -150,54 +150,8 @@ export default function BlogPostClient({ post, relatedPosts }: BlogPostClientPro
           </div>
 
           {/* Article Content */}
-          <div className="prose prose-lg max-w-none mb-12 prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:pb-2 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:leading-7 prose-p:my-6 prose-ul:my-6 prose-ul:ml-6 prose-li:mt-2 prose-strong:font-semibold prose-a:text-primary prose-a:underline prose-a:underline-offset-4 hover:prose-a:text-primary/80 prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-table:w-full prose-table:border-collapse prose-th:border prose-th:p-2 prose-th:bg-muted prose-td:border prose-td:p-2">
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              components={{
-                h1: ({ children }) => <h1 className="text-4xl font-bold mb-6 mt-8">{children}</h1>,
-                h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-10 border-b pb-2">{children}</h2>,
-                h3: ({ children }) => <h3 className="text-2xl font-semibold mb-4 mt-8">{children}</h3>,
-                h4: ({ children }) => <h4 className="text-xl font-semibold mb-3 mt-6">{children}</h4>,
-                p: ({ children }) => <p className="leading-7 my-6">{children}</p>,
-                ul: ({ children }) => <ul className="my-6 ml-6 list-disc space-y-2">{children}</ul>,
-                ol: ({ children }) => <ol className="my-6 ml-6 list-decimal space-y-2">{children}</ol>,
-                li: ({ children }) => <li className="leading-7">{children}</li>,
-                a: ({ href, children }) => (
-                  <a
-                    href={href}
-                    className="text-primary underline underline-offset-4 hover:text-primary/80"
-                    target={href?.startsWith("http") ? "_blank" : undefined}
-                    rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
-                  >
-                    {children}
-                  </a>
-                ),
-                code: ({ children }) => (
-                  <code className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono">{children}</code>
-                ),
-                pre: ({ children }) => (
-                  <pre className="bg-muted p-4 rounded-lg overflow-x-auto my-6">
-                    <code className="text-sm font-mono">{children}</code>
-                  </pre>
-                ),
-                blockquote: ({ children }) => (
-                  <blockquote className="border-l-4 border-primary pl-6 italic text-muted-foreground my-6">
-                    {children}
-                  </blockquote>
-                ),
-                table: ({ children }) => (
-                  <div className="overflow-x-auto my-6">
-                    <table className="w-full border-collapse">{children}</table>
-                  </div>
-                ),
-                thead: ({ children }) => <thead className="bg-muted">{children}</thead>,
-                th: ({ children }) => <th className="border p-3 text-left font-semibold">{children}</th>,
-                td: ({ children }) => <td className="border p-3">{children}</td>,
-                strong: ({ children }) => <strong className="font-semibold text-foreground">{children}</strong>,
-              }}
-            >
-              {post.content}
-            </ReactMarkdown>
+          <div className="prose prose-lg max-w-none mb-12">
+            <MDXRemote source={post.content} components={mdxComponents} />
           </div>
 
           {/* Tags */}
